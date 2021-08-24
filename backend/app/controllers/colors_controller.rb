@@ -5,7 +5,7 @@ class ColorsController < ApplicationController
   def index
     @colors = Color.all
 
-    render json: @colors
+    render json: @colors #include: :plants
   end
 
   # GET /colors/1
