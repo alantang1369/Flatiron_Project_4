@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibiscus Garden</title>
+</head>
+<body>
+    <div id="plant-header">
+
+    </div>
+    <p style="text-align:center">
+         <button id="new-plant-btn">Add a new plant!</button>
+    </p>
+    <div id="add-plant">
+        <form class="add-plant-form off">
+            <h3>Create a plant!</h3>
+    
+            Name: <input
+              type="text"
+              name="name"
+              value=""
+              placeholder="Enter a plant's name..."
+              class="input-text"
+            />
+            <br />
+            Image URL:<input
+              type="text"
+              name="image"
+              value=""
+              placeholder="Enter a plant's image URL..."
+              class="input-text"
+            />
+            <br />
+            Hybridizer:<input
+              type="text"
+              name="hybridizer"
+              value=""
+              placeholder="Enter a plant's hybridizer..."
+              class="input-text"
+            />
+            <br />
+            Description:<input
+              type="textarea"
+              name="description"
+              value=""
+              placeholder="Enter a plant's details..."
+              class="input-text"
+            />
+            <br />
+            
+            Select Color:<select name="new-color" id="new-color">
+                <option value="Red">Red</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Pink" >Pink</option>
+                <option value="White" >White</option>
+                <option value="Purple & Blue" >Purple & Blue</option>
+                <option value="Multi-colored" selected >Multi-colored</option>
+            </select>
+              <br>
+            <input
+              type="submit"
+              name="submit"
+              value="Create New Plant"
+              class="submit"
+            />
+            <br>
+          </form>
+
+    </div>
+    
+    
+    <div id="plant-container">
+
+    </div>
+
+    <div id="filter">
+
+    </div>
+
+
+
+    <script src="src/color.js"></script>
+    <script src="src/colorService.js"></script>
+    <script src="src/plant.js"></script>
+    <script src="src/plantService.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
