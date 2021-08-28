@@ -30,17 +30,22 @@ class Plant {
         let p2 = document.createElement('p')
         p2.innerHTML = `<h4>Description:</h4> ${this.description}`
 
-        this.plantElement.append(h2, img, p1, p2)
+        let delbtn = document.createElement('button')
+        delbtn.setAttribute('id', this.id)
+        delbtn.setAttribute('class', 'delete-button')
+        delbtn.innerHTML = 'Delete'
+        this.plantElement.append(h2,img, p1, p2, delbtn)
         
+        delbtn.addEventListener('click', plantService.deletePlant)
         return this.plantElement
-
+        
     }
 
     attachOnDom(){
         Plant.plantContainer.appendChild(this.plantHTML())
     }
 
-
+    
 }
 
     

@@ -16,4 +16,52 @@ class PlantService{
             }
         })
     }
+
+    postPlant(plant_data){
+       
+        const data = {
+            plant:{
+            name: plant_data.name.value,
+            img_url: plant_data.image.value,
+            hybridizer: plant_data.hybridizer.value,
+            description: plant_data.description.value,
+            
+            color_id: parseInt(plant_data.color.value)         
+         }
+        }
+        
+      // return console.log(plant)
+        fetch(`${this.endpoint}plants`,{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                 Accept: 'application/json'
+            },
+            body: JSON.stringify(data)
+
+        })
+        .then(resp => resp.json())
+        .then( obj_plant => {
+            const p = new Plant(obj_plant)
+            p.attachOnDom()
+        })
+    }
+
+    deletePlant(event){
+        const id = this.id
+        
+        fetch(`${plantService.endpoint}plants/${id}`,{
+            method: "DELETE",
+            headers: {
+                'Content_Type': 'application/json'
+            }
+        })
+        .then(resp => resp.json())
+        .then(json => { debugger
+            alert(json.message)
+            Plant.plantContainer.innerHTML = ""
+            plantService.getPlants()
+        })
+        
+    }
 }

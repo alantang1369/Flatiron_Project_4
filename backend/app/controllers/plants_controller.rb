@@ -16,8 +16,9 @@ class PlantsController < ApplicationController
   # POST /plants
   def create
     @plant = Plant.new(plant_params)
-
+    
     if @plant.save
+      
       render json: @plant, status: :created, location: @plant
     else
       render json: @plant.errors, status: :unprocessable_entity
@@ -36,7 +37,7 @@ class PlantsController < ApplicationController
   # DELETE /plants/1
   def destroy
     @plant.destroy
-    render json:{message: 'Plant successfully deleted'}
+    render json: {message: 'Plant successfully deleted'}
   end
 
   private
@@ -47,6 +48,6 @@ class PlantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plant_params
-      params.require(:plant).permit(:name, :hybridizer, :description, :color_id)
+      params.require(:plant).permit(:name,:img_url, :hybridizer, :description, :color_id)
     end
 end

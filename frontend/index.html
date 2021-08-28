@@ -12,14 +12,14 @@
     <p style="text-align:center">
          <button id="new-plant-btn">Add a new plant!</button>
     </p>
+    
     <div id="add-plant">
-        <form class="add-plant-form off">
+        <form class="add-plant-form ">
             <h3>Create a plant!</h3>
     
             Name: <input
               type="text"
               name="name"
-              value=""
               placeholder="Enter a plant's name..."
               class="input-text"
             />
@@ -27,7 +27,6 @@
             Image URL:<input
               type="text"
               name="image"
-              value=""
               placeholder="Enter a plant's image URL..."
               class="input-text"
             />
@@ -35,30 +34,30 @@
             Hybridizer:<input
               type="text"
               name="hybridizer"
-              value=""
               placeholder="Enter a plant's hybridizer..."
               class="input-text"
             />
             <br />
-            Description:<input
-              type="textarea"
+            Description:<br><textarea
               name="description"
-              value=""
+              cols="40"
+              rows="5"
               placeholder="Enter a plant's details..."
               class="input-text"
-            />
+            ></textarea>
+
             <br />
             
-            Select Color:<select name="new-color" id="new-color">
-                <option value="Red">Red</option>
-                <option value="Orange">Orange</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Pink" >Pink</option>
-                <option value="White" >White</option>
-                <option value="Purple & Blue" >Purple & Blue</option>
-                <option value="Multi-colored" selected >Multi-colored</option>
+            Select Color:<select name="color" id="color">
+                <option value="1">Red</option>
+                <option value="2">Orange</option>
+                <option value="3">Yellow</option>
+                <option value="4" >Pink</option>
+                <option value="5" >White</option>
+                <option value="6" >Purple & Blue</option>
+                <option value="7" selected >Multi-colored</option>
             </select>
-              <br>
+            <br>
             <input
               type="submit"
               name="submit"
@@ -76,7 +75,10 @@
     </div>
 
     <div id="filter">
+      <button id="color-filter">Color Filter</button>
+      <div id="color_container">
 
+      </div>
     </div>
 
 
