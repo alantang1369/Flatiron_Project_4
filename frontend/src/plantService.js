@@ -48,8 +48,8 @@ class PlantService{
     }
 
     deletePlant(event){
-        const id = this.id
-        
+        const id = parseInt(this.id)
+        Plant.deleteObjPlant(id)
         fetch(`${plantService.endpoint}plants/${id}`,{
             method: "DELETE",
             headers: {
@@ -57,10 +57,13 @@ class PlantService{
             }
         })
         .then(resp => resp.json())
-        .then(json => { debugger
+        .then(json => { 
             alert(json.message)
             Plant.plantContainer.innerHTML = ""
-            plantService.getPlants()
+            for ( const plant of Plant.all){
+                Plant.plantContainer.appendChild(plant.plantElement)
+            }
+
         })
         
     }

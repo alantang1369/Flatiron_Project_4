@@ -45,7 +45,14 @@ class Plant {
         Plant.plantContainer.appendChild(this.plantHTML())
     }
 
-    
+    static deleteObjPlant(id){
+        let i = Plant.all.findIndex(plant => plant.id === id)
+        
+        Plant.all.splice(i,1)
+        //debugger
+    }
+
+   
 }
 
     

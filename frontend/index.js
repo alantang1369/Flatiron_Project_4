@@ -6,6 +6,9 @@ const plantForm = document.getElementById("add-plant")
 let addPlant = false
 const colorService = new ColorService(base_url)
 const colorBtn = document.getElementById('color-filter')
+const ul = document.querySelector('#color-list')
+
+
 addBtn.addEventListener('click', () => {
   // hide & seek with the form
   
@@ -25,3 +28,5 @@ plantForm.addEventListener('submit', event => {
 })
 
 colorBtn.addEventListener('click', colorService.getColor)
+
+ul.addEventListener('click', ColorService.renderFilteredPlant)
