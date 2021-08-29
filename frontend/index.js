@@ -7,6 +7,9 @@ let addPlant = false
 const colorService = new ColorService(base_url)
 const colorBtn = document.getElementById('color-filter')
 const ul = document.querySelector('#color-list')
+let showColor = false
+colorService.getColor()
+const colorList = document.getElementById('color-container')
 
 
 addBtn.addEventListener('click', () => {
@@ -27,6 +30,13 @@ plantForm.addEventListener('submit', event => {
   event.target.reset() 
 })
 
-colorBtn.addEventListener('click', colorService.getColor)
+colorBtn.addEventListener('click', ()=>{
+  showColor = !showColor
+  if (showColor){
+   colorList.style.display = 'block'
+  }else{
+    colorList.style.display = 'none';
+  }
+})
 
 ul.addEventListener('click', ColorService.renderFilteredPlant)

@@ -4,10 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hibiscus Garden</title>
+    <link rel="stylesheet" href="index.css" />
+
 </head>
 <body>
     <div id="plant-header">
-
+      <!-- <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/45518688_1399556470175168_7819634805917614080_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=b9115d&_nc_ohc=VQNFCdv-QNcAX_N3Q1G&_nc_ht=scontent-lax3-2.xx&oh=ffe7e90b847394022d2e12ccef9c7e6d&oe=6151020D" alt=""> -->
+      <p>Welcome to My Hibiscus Garden</p>
     </div>
     <p style="text-align:center">
          <button id="new-plant-btn">Add a new plant!</button>
@@ -15,7 +18,7 @@
     
     <div id="add-plant">
         <form class="add-plant-form ">
-            <h3>Create a plant!</h3>
+            <h2>Create a plant!</h2>
     
             Name: <input
               type="text"
@@ -44,6 +47,7 @@
               rows="5"
               placeholder="Enter a plant's details..."
               class="input-text"
+              maxlength="50"
             ></textarea>
 
             <br />
@@ -69,19 +73,20 @@
 
     </div>
     
-    
-    <div id="plant-container">
-
-    </div>
-
     <div id="filter">
       <button id="color-filter">Color Filter</button>
-      <div id="color_container">
+      <div id="color-container">
         <ul id="color-list">
 
         </ul>
       </div>
     </div>
+    
+    <div id="plant-container">
+
+    </div>
+
+    
 
 
 

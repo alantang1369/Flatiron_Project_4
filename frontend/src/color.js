@@ -16,6 +16,7 @@ class Color{
         let h4 = document.createElement('h4')
         h4.id = this.id
         h4.innerText= this.name
+        h4.className ='color-name'
         this.colorElement.append(h4)
         
         return this.colorElement

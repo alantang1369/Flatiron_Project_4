@@ -10,6 +10,7 @@ class Plant {
         this.color_id = color_id 
 
         this.plantElement = document.createElement('div')
+        this.plantElement.className = 'plant-card'
         this.plantElement.dataset.id = this.id 
         this.plantElement.id = `plant-${this.id}`
        
@@ -25,7 +26,8 @@ class Plant {
         img.setAttribute('class', 'plant-photo')
 
         let p1 = document.createElement('p')
-        p1.innerText = `Hybridized by ${this.hybridizer}`
+        p1.innerHTML = `Hybridized by <em>${this.hybridizer}</em>`
+        p1.className = 'hybridizer'
 
         let p2 = document.createElement('p')
         p2.innerHTML = `<h4>Description:</h4> ${this.description}`
