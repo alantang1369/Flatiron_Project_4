@@ -10,7 +10,7 @@ Fork the repository and then clone.
 
 - Run `bundle install` to install the various dependencies specified within the Gemfile.
 
-- Navigate to the `/backend` folder within the app and run `rails s` to start the rails server.
+- Navigate to the `/backend` folder within the app and `rails db:migrate`, `rails db:seed` and `rails s` to start the rails server.
 
 - run rails db:migrate in terminal 
 

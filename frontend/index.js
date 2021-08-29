@@ -10,7 +10,7 @@ const ul = document.querySelector('#color-list')
 let showColor = false
 colorService.getColor()
 const colorList = document.getElementById('color-container')
-
+const allBtn = document.getElementById('all-plants')
 
 addBtn.addEventListener('click', () => {
   // hide & seek with the form
@@ -36,6 +36,13 @@ colorBtn.addEventListener('click', ()=>{
    colorList.style.display = 'block'
   }else{
     colorList.style.display = 'none';
+  }
+})
+
+allBtn.addEventListener('click', ()=>{
+  Plant.plantContainer.innerHTML = ""
+  for ( const plant of Plant.all){
+    Plant.plantContainer.appendChild(plant.plantElement)
   }
 })
 
